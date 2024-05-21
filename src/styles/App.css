@@ -1,3 +1,10 @@
 body {
   background-color: rgb(203, 223, 248);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px 40px;
+}
+
+main {
+  /* border: 2px solid green; */
 }
