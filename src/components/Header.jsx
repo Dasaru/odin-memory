@@ -1,6 +1,6 @@
 import "../styles/Header.css";
 
-export default function Header() {
+export default function Header({ score, bestScore }) {
   return (
     <header>
       <div className="headerTitle">
@@ -9,11 +9,11 @@ export default function Header() {
       </div>
       <div className="scoreCounter">
         <h2>Score:</h2>
-        <span>0 / 12</span>
+        <span>{score} / 12</span>
       </div>
       <div className="bestScore">
-        <h2>Best:</h2>
-        <span>0</span>
+        <h2>Best:&nbsp;</h2>
+        <span>{bestScore}</span>
       </div>
     </header>
   );
