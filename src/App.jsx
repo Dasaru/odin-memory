@@ -1,35 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import CardArea from './components/CardArea';
 import './styles/App.css';
 
-const defaultImage = "https://placehold.co/300x300";
-
-const backupImages = [
-  { img: defaultImage, name:"A" },
-  { img: defaultImage, name:"B" },
-  { img: defaultImage, name:"C" },
-  { img: defaultImage, name:"D" },
-  { img: defaultImage, name:"E" },
-  { img: defaultImage, name:"F" },
-  { img: defaultImage, name:"G" },
-  { img: defaultImage, name:"H" },
-  { img: defaultImage, name:"I" },
-  { img: defaultImage, name:"J" },
-  { img: defaultImage, name:"K" },
-  { img: defaultImage, name:"L" }
+const cardImages = [
+  { img: "/src/assets/pokemon/Bulbasaur.png", name:"Bulbasaur" },
+  { img: "/src/assets/pokemon/Charmander.png", name:"Charmander" },
+  { img: "/src/assets/pokemon/Clefairy.png", name:"Clefairy" },
+  { img: "/src/assets/pokemon/Flareon.png", name:"Flareon" },
+  { img: "/src/assets/pokemon/Jolteon.png", name:"Jolteon" },
+  { img: "/src/assets/pokemon/Magikarp.png", name:"Magikarp" },
+  { img: "/src/assets/pokemon/Pikachu.png", name:"Pikachu" },
+  { img: "/src/assets/pokemon/Psyduck.png", name:"Psyduck" },
+  { img: "/src/assets/pokemon/Slowpoke.png", name:"Slowpoke" },
+  { img: "/src/assets/pokemon/Squirtle.png", name:"Squirtle" },
+  { img: "/src/assets/pokemon/Staryu.png", name:"Staryu" },
+  { img: "/src/assets/pokemon/Vaporeon.png", name:"Vaporeon" }
 ];
 
 function App() {
-  const [cardList, setCardList] = useState([]);
+  const [cardList, setCardList] = useState(cardImages);
   const [chosenCards, setChosenCards] = useState([]);
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-
-  useEffect(() => {
-    // API Call using pokeapi-js-wrapper
-    setCardList(backupImages);
-  }, []);
 
   const shuffle = (array) => { 
     for (let i = array.length - 1; i > 0; i--) { 
@@ -51,12 +44,11 @@ function App() {
   };
 
   const cardClicked = (name) => {
-    // Game logic.
-    console.log("Card " + name + " clicked!");
 
     if (chosenCards.includes(name)) {
       // Game Over: Card in chosen!
       flashBackgroundRed();
+      shuffleList();
       // Reset Scores.
       setScore(0);
       setChosenCards([]);
@@ -76,8 +68,10 @@ function App() {
       if (newScore >= 12) {
         window.alert("CONGRATULATIONS! YOU WIN!!!");
         setScore(0);
+        setChosenCards([]);
       }
     }
+
   };
 
   return (
