@@ -4,18 +4,18 @@ import CardArea from './components/CardArea';
 import './styles/App.css';
 
 const cardImages = [
-  { img: "/src/assets/pokemon/Bulbasaur.png", name:"Bulbasaur" },
-  { img: "/src/assets/pokemon/Charmander.png", name:"Charmander" },
-  { img: "/src/assets/pokemon/Clefairy.png", name:"Clefairy" },
-  { img: "/src/assets/pokemon/Flareon.png", name:"Flareon" },
-  { img: "/src/assets/pokemon/Jolteon.png", name:"Jolteon" },
-  { img: "/src/assets/pokemon/Magikarp.png", name:"Magikarp" },
-  { img: "/src/assets/pokemon/Pikachu.png", name:"Pikachu" },
-  { img: "/src/assets/pokemon/Psyduck.png", name:"Psyduck" },
-  { img: "/src/assets/pokemon/Slowpoke.png", name:"Slowpoke" },
-  { img: "/src/assets/pokemon/Squirtle.png", name:"Squirtle" },
-  { img: "/src/assets/pokemon/Staryu.png", name:"Staryu" },
-  { img: "/src/assets/pokemon/Vaporeon.png", name:"Vaporeon" }
+  { img: "/images/Bulbasaur.png", name:"Bulbasaur" },
+  { img: "/images/Charmander.png", name:"Charmander" },
+  { img: "/images/Clefairy.png", name:"Clefairy" },
+  { img: "/images/Flareon.png", name:"Flareon" },
+  { img: "/images/Jolteon.png", name:"Jolteon" },
+  { img: "/images/Magikarp.png", name:"Magikarp" },
+  { img: "/images/Pikachu.png", name:"Pikachu" },
+  { img: "/images/Psyduck.png", name:"Psyduck" },
+  { img: "/images/Slowpoke.png", name:"Slowpoke" },
+  { img: "/images/Squirtle.png", name:"Squirtle" },
+  { img: "/images/Staryu.png", name:"Staryu" },
+  { img: "/images/Vaporeon.png", name:"Vaporeon" }
 ];
 
 function App() {
